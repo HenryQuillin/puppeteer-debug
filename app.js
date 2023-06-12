@@ -1,5 +1,5 @@
 const express = require('express');
-const puppeteer = require("puppeteer-extra");
+const puppeteer = require("puppeteer");
 const pluginStealth = require("puppeteer-extra-plugin-stealth");
 
 
@@ -9,7 +9,7 @@ const port = process.env.PORT || 3000;
 app.post('/', async (req, res) => {
   // puppeteer.use(pluginStealth());
   const browser = await puppeteer.launch({
-    headless: "new",
+    // headless: "new",
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
   });
   // c
