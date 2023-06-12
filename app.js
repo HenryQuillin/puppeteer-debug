@@ -7,7 +7,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.post('/', async (req, res) => {
-  puppeteer.use(pluginStealth());
+  // puppeteer.use(pluginStealth());
   const browser = await puppeteer.launch({
     headless: "new",
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
